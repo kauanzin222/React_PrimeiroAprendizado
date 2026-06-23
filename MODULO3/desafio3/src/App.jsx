@@ -1,6 +1,7 @@
 // Components
 import AlterarDado from './components/AlterarDado'
 import ListaRender from './components/ListaRender'
+import CondicionalRender from './components/CondicionalRender'
 
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
@@ -35,6 +36,11 @@ function App() {
       <br />
 
       <ListaRender></ListaRender>
+
+      <br />
+      <br />
+
+      <CondicionalRender></CondicionalRender>
 
       <br />
       <br />
