@@ -1,5 +1,6 @@
 // Components
 import AlterarDado from './components/AlterarDado'
+import ListaRender from './components/ListaRender'
 
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
@@ -29,6 +30,11 @@ function App() {
       </section>
 
       <AlterarDado></AlterarDado>
+
+      <br />
+      <br />
+
+      <ListaRender></ListaRender>
 
       <br />
       <br />
