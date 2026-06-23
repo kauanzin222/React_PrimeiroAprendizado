@@ -3,6 +3,7 @@ import PrimeiroComponente from './components/PrimeiroComponente'
 import TemplateExpressions from './components/TemplateExpressions'
 import MeuComponente from './components/MeuComponente.'
 import Eventos from './components/Eventos'
+import Challenge from './components/Challenge'
 
 
 import { useState } from 'react'
@@ -31,6 +32,7 @@ function App() {
 
       <section>
         <Eventos></Eventos>
+        <Challenge></Challenge>
       </section>
     </>
   )
