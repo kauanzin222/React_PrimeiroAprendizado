@@ -1,3 +1,6 @@
+// Components
+import AlterarDado from './components/AlterarDado'
+
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
@@ -24,6 +27,11 @@ function App() {
         {/* Imagem em Assets */}
         <img src={Paisagem2} alt="Paisagem2" className='imgPaisagem'/>
       </section>
+
+      <AlterarDado></AlterarDado>
+
+      <br />
+      <br />
     </>
   )
 }
