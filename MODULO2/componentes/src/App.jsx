@@ -1,3 +1,8 @@
+// Components
+import PrimeiroComponente from './components/PrimeiroComponente'
+import TemplateExpressions from './components/TemplateExpressions'
+
+
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
@@ -9,7 +14,18 @@ function App() {
 
   return (
     <>
-     <h1>Fundamento React</h1>
+      <header>
+        <h1>Fundamento React</h1>
+      </header>
+
+      <section>
+        <PrimeiroComponente></PrimeiroComponente>
+      </section>
+
+      <section>
+        <TemplateExpressions></TemplateExpressions>
+      </section>
+
     </>
   )
 }

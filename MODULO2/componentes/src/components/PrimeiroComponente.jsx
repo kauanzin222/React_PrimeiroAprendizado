@@ -1,7 +1,7 @@
 const PrimeiroComponente = () => {
     return (
-        <div>
-            <h1>Meu primeiro Componente</h1>
+        <div className="sub-titulo">
+            <h2>Meu primeiro Componente</h2>
         </div>
     )
 }
