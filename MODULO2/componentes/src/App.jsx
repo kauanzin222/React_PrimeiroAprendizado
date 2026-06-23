@@ -1,6 +1,8 @@
 // Components
 import PrimeiroComponente from './components/PrimeiroComponente'
 import TemplateExpressions from './components/TemplateExpressions'
+import MeuComponente from './components/MeuComponente.'
+import Eventos from './components/Eventos'
 
 
 import { useState } from 'react'
@@ -24,8 +26,12 @@ function App() {
 
       <section>
         <TemplateExpressions></TemplateExpressions>
+        <MeuComponente></MeuComponente>
       </section>
 
+      <section>
+        <Eventos></Eventos>
+      </section>
     </>
   )
 }
