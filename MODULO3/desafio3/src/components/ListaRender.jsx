@@ -18,7 +18,7 @@ function ListaRender() {
     }
 
     return (
-        <section>
+        <section className='container'>
             <article>
                 <ul>
                     {list.map((item, i) => (

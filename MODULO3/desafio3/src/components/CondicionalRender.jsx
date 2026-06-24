@@ -4,7 +4,7 @@ function CondicionalRender() {
     const [x, setX] = useState(true)
     
     return (
-        <section>
+        <section className='container'>
             <h2>Render Condicional</h2>
             {x ? (
                 <p>X é VERDADEIRO ✅</p>

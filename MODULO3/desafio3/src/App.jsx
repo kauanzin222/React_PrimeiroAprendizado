@@ -17,48 +17,48 @@ function App() {
   const [count, setCount] = useState(0)
   const [nomeUsuario] = useState("Matheus")
 
+  const carros = [
+    { id: 1, marca: "Fiat", km: 3000, cor: "Azul", novo: false },
+    { id: 2, marca: "Chevrolet", km: 5000, cor: "Vermelho", novo: true },
+    { id: 3, marca: "Volvo", km: 4000, cor: "Ciano", novo: false }
+  ]
+
 
   return (
     <>
       <header>
         <h1>Seção 3</h1>
       </header>
-
       <section>
         {/* Imagem em Public */}
-        <img src="/img1.jpg" alt="Paisagem1" className='imgPaisagem'/>
+        <img src="/img1.jpg" alt="Paisagem1" className='imgPaisagem' />
       </section>
-
       <section>
         {/* Imagem em Assets */}
-        <img src={Paisagem2} alt="Paisagem2" className='imgPaisagem'/>
+        <img src={Paisagem2} alt="Paisagem2" className='imgPaisagem' />
       </section>
 
       <AlterarDado></AlterarDado>
 
-      <br />
-      <br />
-
       <ListaRender></ListaRender>
-
-      <br />
-      <br />
 
       <CondicionalRender></CondicionalRender>
 
-      <br />
-      <br />
-
       <MostraNomeUsuario nome={nomeUsuario}></MostraNomeUsuario>
 
-      <br />
-      <br />
       {/* Usando destructuring */}
       <DetalhesCarro marca="Fiat" km={2000} cor="Azul"></DetalhesCarro>
       {/* Reaproveitando componente */}
       <DetalhesCarro marca="Chevrolet" km={10000} cor="Vermelho"></DetalhesCarro>
-      <br />
-      <br />
+
+      {carros.map((carro) => (
+        <DetalhesCarro
+          marca={carro.marca}
+          km={carro.km}
+          cor={carro.cor}
+          novo={carro.novo}
+        ></DetalhesCarro>
+      ))}
     </>
   )
 }

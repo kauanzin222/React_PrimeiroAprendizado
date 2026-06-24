@@ -208,3 +208,18 @@ button {
 button:hover {
   background-color: rgb(2, 42, 61);
 }
+
+small {
+  color: rgb(0, 171, 250);
+}
+
+.container {
+  text-align: start;
+  color: white;
+  
+  padding: 1rem;
+  margin: 1rem;
+
+  border: 2px solid white;
+}
+

@@ -4,7 +4,7 @@ const AlterarDado = () => {
     const [dado, setDado] = useState(10)
 
     return (
-        <section>
+        <section className="container">
             <article>
                 <p>Valor: {dado}</p>
             </article>
