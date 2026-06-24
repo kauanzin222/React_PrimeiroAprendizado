@@ -2,6 +2,8 @@
 import AlterarDado from './components/AlterarDado'
 import ListaRender from './components/ListaRender'
 import CondicionalRender from './components/CondicionalRender'
+import MostraNomeUsuario from './components/MostraNomeUsuario'
+import DetalhesCarro from './components/DetalhesCarro'
 
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
@@ -13,6 +15,8 @@ import Paisagem2 from './assets/img2.jpg'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [nomeUsuario] = useState("Matheus")
+
 
   return (
     <>
@@ -42,6 +46,17 @@ function App() {
 
       <CondicionalRender></CondicionalRender>
 
+      <br />
+      <br />
+
+      <MostraNomeUsuario nome={nomeUsuario}></MostraNomeUsuario>
+
+      <br />
+      <br />
+      {/* Usando destructuring */}
+      <DetalhesCarro marca="Fiat" km={2000} cor="Azul"></DetalhesCarro>
+      {/* Reaproveitando componente */}
+      <DetalhesCarro marca="Chevrolet" km={10000} cor="Vermelho"></DetalhesCarro>
       <br />
       <br />
     </>
