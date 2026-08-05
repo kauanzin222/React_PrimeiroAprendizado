@@ -10,6 +10,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
+import ExecuteFunction from './components/ExecuteFunction'
 import './App.css'
 
 import Paisagem2 from './assets/img2.jpg'
@@ -24,6 +25,9 @@ function App() {
     { id: 3, marca: "Volvo", km: 4000, cor: "Ciano", novo: false }
   ]
 
+  function showMessage() {
+    console.log("Evento do componente pai!")
+  }
 
   return (
     <>
@@ -56,6 +60,7 @@ function App() {
 
       {carros.map((carro) => (
         <DetalhesCarro
+          key={carro.id}
           marca={carro.marca}
           km={carro.km}
           cor={carro.cor}
@@ -70,6 +75,9 @@ function App() {
       <Container>
         <p>Este é o conteúdo</p>
       </Container>
+
+      {/* Executar função */}
+      <ExecuteFunction myFunction={showMessage}></ExecuteFunction>
     </>
   )
 }
