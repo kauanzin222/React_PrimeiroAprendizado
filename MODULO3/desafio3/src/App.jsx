@@ -5,6 +5,7 @@ import CondicionalRender from './components/CondicionalRender'
 import MostraNomeUsuario from './components/MostraNomeUsuario'
 import DetalhesCarro from './components/DetalhesCarro'
 import Fragment from './components/Fragment'
+import Container from './components/Container'
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
@@ -41,7 +42,7 @@ function App() {
       <AlterarDado></AlterarDado>
 
       <ListaRender>
-        
+
       </ListaRender>
 
       <CondicionalRender></CondicionalRender>
@@ -61,9 +62,14 @@ function App() {
           novo={carro.novo}
         ></DetalhesCarro>
       ))}
-      
+
       {/* Fragment */}
       <Fragment propFragment="Terceiro Título"></Fragment>
+
+      {/* Children */}
+      <Container>
+        <p>Este é o conteúdo</p>
+      </Container>
     </>
   )
 }
