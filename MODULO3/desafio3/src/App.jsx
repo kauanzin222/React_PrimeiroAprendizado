@@ -11,6 +11,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import ExecuteFunction from './components/ExecuteFunction'
+import Mensagem from './components/Mensagem'
+import MudarStateMensagem from './components/MudarStateMensagem'
 import './App.css'
 
 import Paisagem2 from './assets/img2.jpg'
@@ -27,6 +29,12 @@ function App() {
 
   function showMessage() {
     console.log("Evento do componente pai!")
+  }
+
+  const [mensagem, setMensagem] = useState('')
+
+  const handleMensagem = (msg) => {
+    setMensagem(msg)
   }
 
   return (
@@ -78,7 +86,14 @@ function App() {
 
       {/* Executar função */}
       <ExecuteFunction myFunction={showMessage}></ExecuteFunction>
+
+      {/* State Lift */}
+      <Mensagem msg={mensagem}>
+        <MudarStateMensagem handleMensagem={handleMensagem}></MudarStateMensagem>
+      </Mensagem>
     </>
+
+
   )
 }
 
