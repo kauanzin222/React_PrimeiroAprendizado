@@ -1,10 +1,10 @@
 import React from 'react'
 
 const UserDetails = ({ pessoas }) => {
-    
+
     return (
         <div className='container'>
-            <h2>Desafio 4</h2>
+            <h2 style={{textAlign: 'start'}}>Desafio 4</h2>
             <table>
                 <thead>
                     <tr>
