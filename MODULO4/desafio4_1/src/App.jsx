@@ -14,6 +14,8 @@ function App() {
     { id: 3, nome: 'Pedro', idade: 17, profissao: 'Estagiário' }
   ])
 
+  let redTitle = false
+
   return (
     <>
       <header>
@@ -21,6 +23,12 @@ function App() {
       </header>
 
       <UserDetails pessoas={pessoas}></UserDetails>
+
+      {/* CSS Dinâmico */}
+      <section className='container' style={{textAlign: 'center'}}>
+        <h2>CSS dinâmico</h2>
+        <h3 className={redTitle ? 'red-title' : 'title'}>Este título vai ter classe dinâmica</h3>
+      </section>
     </>
   )
 }

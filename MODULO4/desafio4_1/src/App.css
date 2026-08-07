@@ -1,0 +1,9 @@
+.red-title {
+    color: red;
+    font-weight: bold;
+}
+
+.title {
+    color: rgb(9, 255, 0);
+    font-style: italic;
+}
