@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  font-family: "Montserrat", monospace;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+body {
+  margin: 200px;
+  margin-top: 20px;
+
+}
+
+.container {
+  text-align: center;
+  border-bottom: 2px solid rgb(233, 230, 230);
+
+  display: flex;
+  justify-content: center;
+
+  margin: 16px;
+}

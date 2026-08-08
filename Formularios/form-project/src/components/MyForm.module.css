@@ -1,0 +1,44 @@
+form {
+    text-align: start;
+
+    padding: 16px;
+    width: 80%;
+    margin: 16px;
+
+    background-color: rgb(202, 205, 207);
+    border-radius: 15px;
+}
+
+.sectionForm {
+    margin-top: 30px;
+}
+
+.inputForm {
+    display: block; 
+    margin-top: 12px;
+
+    padding: 10px;
+    border-radius: 10px;
+    border: 0cap;
+
+    width: 70%;
+}
+
+.btnEnviar {
+    padding: 10px;
+    margin-top: 16px;
+
+    background-color: rgb(17, 118, 250);
+    color: white;
+    font-weight: bold;
+    
+    border: 0;  
+    border-radius: 12px;
+
+    width: 150px;
+}
+
+.btnEnviar:hover {
+    cursor: pointer;
+    background-color:  rgb(5, 82, 184);;
+}
