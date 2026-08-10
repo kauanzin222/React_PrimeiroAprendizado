@@ -11,11 +11,11 @@ form {
 
 .sectionForm {
     margin-top: 30px;
-    
+
 }
 
 .inputForm {
-    display: block; 
+    display: block;
     margin-top: 12px;
 
     padding: 10px;
@@ -25,6 +25,21 @@ form {
     width: 70%;
 }
 
+.selectForm {
+    display: block;
+    width: 300px;
+
+    padding: 5px;
+    border-radius: 5px;
+    border: 0;
+
+    margin-top: 12px;
+}
+
+.selectForm:hover {
+    cursor: pointer;
+}
+
 .btnEnviar {
     padding: 10px;
     margin-top: 16px;
@@ -32,8 +47,8 @@ form {
     background-color: rgb(17, 118, 250);
     color: white;
     font-weight: bold;
-    
-    border: 0;  
+
+    border: 0;
     border-radius: 12px;
 
     width: 150px;
@@ -41,5 +56,6 @@ form {
 
 .btnEnviar:hover {
     cursor: pointer;
-    background-color:  rgb(5, 82, 184);;
+    background-color: rgb(5, 82, 184);
+    ;
 }

@@ -14,7 +14,7 @@ function App() {
         <h1>Módulo de Forms</h1>
       </header>
 
-      <MyForm user={{name: 'Lais', email: 'laisoliveira@gmail.com', bio: 'Estudante de Moda'}}></MyForm>
+      <MyForm user={{ name: 'Lais', email: 'laisoliveira@gmail.com', bio: 'Estudante de Moda', role: 'editor' }}></MyForm>
     </>
   )
 }
