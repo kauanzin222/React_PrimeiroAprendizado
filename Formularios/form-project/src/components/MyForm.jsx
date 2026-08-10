@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import styles from './MyForm.module.css'
 
-const MyForm = () => {
+const MyForm = ({user}) => {
   // 3- Gerenciamento de Dados
-  const [name, setName] = useState()
-  const [email, setEmail] = useState()
+  const [name, setName] = useState(user.name ? user.name : '')
+  const [email, setEmail] = useState(user.email ? user.email : '')
 
   const handleName = (e) => {
     setName(e.target.value)
@@ -18,13 +18,14 @@ const MyForm = () => {
 
   return (
     <div className='container'>
+      {/* 6- Controlled Input */}
       {/* 5- Envio do Form */}
       <form onSubmit={handleSubmit}>
         <h2>Formulário Inicial</h2>
         <hr />
         <div className={styles.sectionForm}>
           <label htmlFor="name">Nome: </label>
-          <input type="text" name='name' placeholder='Digite o seu nome' className={styles.inputForm} onChange={handleName} />
+          <input type="text" name='name' placeholder='Digite o seu nome' className={styles.inputForm} onChange={handleName} value={name}/>
         </div>
 
         {/* 2- Label envolvendo Input */}
@@ -32,7 +33,7 @@ const MyForm = () => {
           <label>
             <span>E-mail</span>
             {/* 4- Simplificação de Manipulação de State */}
-            <input type="email" name='email' placeholder='Digite o seu e-mail' className={styles.inputForm} onChange={(e) => setEmail(e.target.value)} />
+            <input type="email" name='email' placeholder='Digite o seu e-mail' className={styles.inputForm} onChange={(e) => setEmail(e.target.value)} value={email}/>
           </label>
         </div>
 
