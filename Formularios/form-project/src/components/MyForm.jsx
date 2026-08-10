@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import styles from './MyForm.module.css'
 
-const MyForm = ({user}) => {
+const MyForm = ({ user }) => {
   // 3- Gerenciamento de Dados
   const [name, setName] = useState(user.name ? user.name : '')
   const [email, setEmail] = useState(user.email ? user.email : '')
+  const [bio, setBio] = useState(user.bio ? user.bio : '')
 
   const handleName = (e) => {
     setName(e.target.value)
@@ -13,11 +14,12 @@ const MyForm = ({user}) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log('Enviando o form')
-    console.log(name, email)
+    console.log(name, email, bio)
 
-    // 7-Limpar formulário
+    // 7- Limpar formulário
     setName('')
     setEmail('')
+    setBio('')
   }
 
   return (
@@ -29,18 +31,24 @@ const MyForm = ({user}) => {
         <hr />
         <div className={styles.sectionForm}>
           <label htmlFor="name">Nome: </label>
-          <input type="text" name='name' placeholder='Digite o seu nome' className={styles.inputForm} onChange={handleName} value={name}/>
+          <input type="text" name='name' placeholder='Digite o seu nome' className={styles.inputForm} onChange={handleName} value={name} />
         </div>
 
         {/* 2- Label envolvendo Input */}
         <div className={styles.sectionForm}>
           <label>
-            <span>E-mail</span>
+            <span>E-mail:</span>
             {/* 4- Simplificação de Manipulação de State */}
-            <input type="email" name='email' placeholder='Digite o seu e-mail' className={styles.inputForm} onChange={(e) => setEmail(e.target.value)} value={email}/>
+            <input type="email" name='email' placeholder='Digite o seu e-mail' className={styles.inputForm} onChange={(e) => setEmail(e.target.value)} value={email} />
           </label>
         </div>
 
+        <div className={styles.sectionForm}>
+          <label>
+            <span>Bio:</span>
+            <textarea name='bio' placeholder='Conte um pouco sobre você!' className={styles.inputForm} value={bio} onChange={(e) => setBio(e.target.value)}></textarea>
+          </label>
+        </div>
 
         <input type="submit" value='Enviar' className={styles.btnEnviar} />
       </form>
