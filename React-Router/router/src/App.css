@@ -1,0 +1,289 @@
+/* ============================================================
+   App.css — Layout, componentes e interações reutilizáveis
+   Combine com o index.css (mesma paleta / variáveis)
+   ============================================================ */
+
+/* ---------- Root / centralização ---------- */
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem 1rem;
+  animation: fadeInUp 0.5s ease;
+}
+
+/* Qualquer <main> ou <div className="container"> vira um bloco central */
+main,
+.container {
+  width: 100%;
+  max-width: 720px;
+  margin: 20px auto;
+}
+
+/* ---------- Header ---------- */
+header {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  padding: 1.2rem 1.5rem;
+  background: var(--color-bg-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* ---------- Nav ---------- */
+nav {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  padding: 0.4rem 0.2rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--color-accent-dark);
+  border-color: var(--color-accent);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  width: 100%;
+  max-width: 720px;
+  margin: 2rem auto 0;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-soft);
+}
+
+/* ---------- Botões ---------- */
+button {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #fff;
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 1.4rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s ease, background var(--transition), box-shadow var(--transition);
+}
+
+button:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+button:active {
+  transform: translateY(0) scale(0.97);
+}
+
+button:disabled {
+  background: #b8b3c9;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Botão secundário: <button className="secondary"> */
+button.secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  box-shadow: none;
+}
+
+button.secondary:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* Botão de perigo: <button className="danger"> */
+button.danger {
+  background: var(--color-danger);
+}
+button.danger:hover {
+  background: #b8324a;
+}
+
+/* ---------- Formulários ---------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  background: var(--color-bg-soft);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+label {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--color-text-soft);
+  margin-bottom: -0.5rem;
+}
+
+input,
+textarea,
+select {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.6rem 0.9rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-primary-light);
+  box-shadow: 0 0 0 3px rgba(76, 58, 117, 0.15);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9b93b3;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* ---------- Listas comuns (ex.: to-do lists) ---------- */
+ul {
+  list-style: none;
+  padding-left: 0;
+  width: 100%;
+}
+
+ul li {
+  background: var(--color-bg-soft);
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.6rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  animation: fadeInUp 0.35s ease;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+ul li:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ---------- Card genérico: <div className="card"> ---------- */
+.card {
+  width: 100%;
+  background: var(--color-bg-soft);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border-top: 4px solid var(--color-accent);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ---------- Tabelas ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-bg-soft);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+th, td {
+  padding: 0.7rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+th {
+  font-family: var(--font-display);
+  background: var(--color-primary);
+  color: #fff;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* ---------- Badges / status pequenos ---------- */
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: var(--color-accent);
+  color: #fff;
+}
+
+/* ---------- Spinner de loading: <div className="spinner"> ---------- */
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 1rem auto;
+}
+
+/* ---------- Utilitário de centralização rápida ---------- */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav {
+    justify-content: center;
+  }
+}
