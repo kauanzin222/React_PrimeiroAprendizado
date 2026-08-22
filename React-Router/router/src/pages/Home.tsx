@@ -3,9 +3,11 @@ import { useFetch } from "../hooks/useFetch"
 
 import type { Product } from "../interfaces/Product"
 
-const Home = () => {
-    const url = 'http://localhost:3000/products/'
+interface HomeProps {
+    url: string
+}
 
+const Home = ({ url }: HomeProps) => {
     // Carregamento de Dados
     const { data: items, error } = useFetch<Product[]>(url)
 

@@ -9,9 +9,12 @@ import NavBar from './components/NavBar'
 // Pages
 import Home from './pages/Home'
 import About from './pages/About'
-import Product from './pages/Product'
+import ProductDetails from './pages/ProductDetails'
+import ProductInfo from './pages/ProductInfo'
 
 function App() {
+  const url = 'http://localhost:3000/products/'
+
   return (
     <>
       <main>
@@ -20,10 +23,12 @@ function App() {
         <BrowserRouter>
           <NavBar />
           <Routes>
-            <Route path='/' element={<Home />} />
+            <Route path='/' element={<Home url={url}/>} />
             <Route path='/about' element={<About />} />
             {/* Rota Dinâmica */}
-            <Route path='/products/:id' element={<Product />} />
+            <Route path='/products/:id' element={<ProductDetails url={url}/>} />
+            {/* Nested Routes */}
+            <Route path='/products/:id/info' element={<ProductInfo url={url}/>}></Route>
           </Routes>
         </BrowserRouter>
       </main>

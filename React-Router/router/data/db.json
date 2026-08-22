@@ -3,17 +3,20 @@
         {
             "id": "1",
             "name": "Boné aba reta",
-            "price": 29.9
+            "price": 29.9,
+            "info": "Boné da Oakley relançamento"
         },
         {
             "id": "2",
             "name": "Nike Air",
-            "price": 100.9
+            "price": 100.9,
+            "info": "Lançamento Nike Air preto e branco"
         },
         {
             "id": "3",
             "name": "Camisa Seleção",
-            "price": 79.9
+            "price": 79.9,
+            "info": "Camisa do Brasil 2014"
         }
     ]
 }
