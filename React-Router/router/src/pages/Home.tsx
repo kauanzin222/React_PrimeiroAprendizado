@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { useFetch } from "../hooks/useFetch"
 
 import type { Product } from "../interfaces/Product"
@@ -16,7 +17,8 @@ const Home = () => {
                 {items && items.map((item: Product) => (
                     <li key={item.id}>
                         <h2>{item.name}</h2>
-                        <p>R$ {item.price}</p>
+                        <p>R$ {item.price} - <Link to={`/products/${item.id}`}>Detalhes</Link></p>
+                        {/* Rota Dinâmica */}
                     </li>
                 ))}
             </ul>
