@@ -11,6 +11,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import ProductDetails from './pages/ProductDetails'
 import ProductInfo from './pages/ProductInfo'
+import NotFound from './pages/NotFound'
 
 function App() {
   const url = 'http://localhost:3000/products/'
@@ -28,7 +29,9 @@ function App() {
             {/* Rota Dinâmica */}
             <Route path='/products/:id' element={<ProductDetails url={url}/>} />
             {/* Nested Routes */}
-            <Route path='/products/:id/info' element={<ProductInfo url={url}/>}></Route>
+            <Route path='/products/:id/info' element={<ProductInfo url={url}/>}/>
+            {/* No match route */}
+            <Route path='*' element={<NotFound/>}/>
           </Routes>
         </BrowserRouter>
       </main>
