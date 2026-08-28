@@ -1,7 +1,11 @@
+import { useCounterContext } from "../hooks/useCounterContext"
+
 const About = () => {
+    const {counter} = useCounterContext()
+    
     return (
         <main>
-            Sobre
+            <p>Valor do counter: {counter}</p>
         </main>
     )
 }
