@@ -17,6 +17,12 @@
             "name": "Camisa Seleção",
             "price": 79.9,
             "info": "Camisa do Brasil 2014"
+        },
+           {
+            "id": "4",
+            "name": "Nike AirMax",
+            "price": 100.9,
+            "info": "Lançamento Nike AirMax branco"
         }
     ]
 }
