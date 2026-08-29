@@ -1,6 +1,10 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
+
+// components
 import NavBar from './components/NavBar'
+
+// pages
 import About from './pages/About'
 import Home from './pages/Home'
 import Products from './pages/Products'

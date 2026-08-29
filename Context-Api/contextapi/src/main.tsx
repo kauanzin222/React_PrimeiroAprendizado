@@ -5,11 +5,14 @@ import App from './App.tsx'
 
 // ContextAPI
 import { CounterContextProvider } from './context/CounterContext.tsx'
+import { TitleColorContextProvider } from './context/TitleColorContext.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <CounterContextProvider>
-      <App />
+      <TitleColorContextProvider>
+        <App />
+      </TitleColorContextProvider>
     </CounterContextProvider>
   </StrictMode>,
 )

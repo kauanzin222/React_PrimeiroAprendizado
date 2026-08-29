@@ -4,9 +4,9 @@ import { CounterContext } from "../context/CounterContext";
 export const useCounterContext = () => {
     const context = useContext(CounterContext)
 
-    if(!context) {
+    if (!context) {
         throw new Error('Contexto não encontrado')
     }
 
-    return context;
+    return context
 }

@@ -16,5 +16,3 @@ export const CounterContextProvider = ({ children }: PropsWithChildren) => {
     </CounterContext.Provider>
   )
 }
-
-export default CounterContext
